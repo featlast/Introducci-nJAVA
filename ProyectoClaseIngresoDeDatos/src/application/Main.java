@@ -76,7 +76,9 @@ public class Main extends Application {
 		alerta.showAndWait();
 	}
 	/**
-	 * Falta la documentación
+	 * Falta la documentació: Ya la Hice
+	 * 
+	 * 
 	 */
 	public static int ejecutarOpcion(int opc, int num1, int num2, int num3) {
 		int numSalida = 0;
