@@ -11,6 +11,7 @@ import javafx.scene.control.TextInputDialog;
 public class Main extends Application {
 	@Override
 	public void start(Stage primaryStage) {
+		//Codigo
 //		int menor = obtenerNumeroMenorDeTresNumeros(5, 6, 3);
 //		mostrarAlerta("Hola.. El Numero Menor De " + 5 + " " + 6 + " " + 3 + " Es: " + menor,
 //				"Metodo Numero Menor De Tres", "Cabecera", AlertType.INFORMATION);
