@@ -38,12 +38,12 @@ public class Main extends Application {
 	}
 
 	/**
-	 * Método que permite obtener cadenas de texto en pantalla
+	 * Mï¿½todo que permite obtener cadenas de texto en pantalla
 	 * 
 	 * @param mensaje  etiqueta referente al campo de texto a ingresar
 	 * @param titulo   del objeto
 	 * @param cabecera del objeto
-	 * @return un String con la información ingresada en el objeto
+	 * @return un String con la informaciï¿½n ingresada en el objeto
 	 */
 	public static String ingresarMensaje(String mensaje, String titulo, String cabecera) {
 
@@ -61,7 +61,7 @@ public class Main extends Application {
 	}
 
 	/**
-	 * Método que permite mostrar una alerta en pantalla
+	 * Mï¿½todo que permite mostrar una alerta en pantalla
 	 * 
 	 * @param mensaje  a mostrar
 	 * @param titulo   del objeto
@@ -75,7 +75,9 @@ public class Main extends Application {
 		alerta.setHeaderText(cabecera);
 		alerta.showAndWait();
 	}
-
+	/**
+	 * Falta la documentaciÃ³n
+	 */
 	public static int ejecutarOpcion(int opc, int num1, int num2, int num3) {
 		int numSalida = 0;
 
