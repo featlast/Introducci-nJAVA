@@ -14,17 +14,23 @@ public class Main extends Application {
 //		int menor = obtenerNumeroMenorDeTresNumeros(5, 6, 3);
 //		mostrarAlerta("Hola.. El Numero Menor De " + 5 + " " + 6 + " " + 3 + " Es: " + menor,
 //				"Metodo Numero Menor De Tres", "Cabecera", AlertType.INFORMATION);
-		
-		int opcion=Integer.parseInt(ingresarMensaje("Opcion", "Menu", "Ingrese 1. Para Verificar Cual Es El Numero Menor"));
-		int num1=Integer.parseInt(ingresarMensaje("1: ", "Ingreso De Datos", "Digita El Numero 1."));
-		int num2=Integer.parseInt(ingresarMensaje("2:", "Ingreso De Datos", "Digita El Numero 2."));
-		int num3=Integer.parseInt(ingresarMensaje("3:", "Ingreso De Datos", "Digita El Numero 3."));
-		int menor=ejecutarOpcion(opcion, num1, num2, num3);
-		mostrarAlerta(menor+"", "Resultado","El Numero Menor Es: ", AlertType.INFORMATION);
-		//1. ingresar la opcion con el metodo ingresar mensaje
-		//2. ingresar los datos 
-		//3.llamar el metodo ejecutar opcion.
-		 
+
+		int opcion = Integer.parseInt(ingresarMensaje("Opcion", "Menu",
+				"Ingrese 1. Para Verificar Cual Es El Numero Menor\nIngrese 2. Para Verificar Cual Es El Numero Mayor"));
+
+		int num1 = Integer.parseInt(ingresarMensaje("1: ", "Ingreso De Datos", "Digita El Numero 1."));
+		int num2 = Integer.parseInt(ingresarMensaje("2:", "Ingreso De Datos", "Digita El Numero 2."));
+		int num3 = Integer.parseInt(ingresarMensaje("3:", "Ingreso De Datos", "Digita El Numero 3."));
+		int menor = ejecutarOpcion(opcion, num1, num2, num3);
+		int mayor = ejecutarOpcion(opcion, num1, num2, num3);
+		if (opcion == 1) {
+			mostrarAlerta(menor + "", "Resultado", "El Numero Menor Es: ", AlertType.INFORMATION);
+		} else if (opcion == 2) {
+			mostrarAlerta(mayor + "", "Resultado", "El Numero Mayor Es: ", AlertType.INFORMATION);
+			// 1. ingresar la opcion con el metodo ingresar mensaje
+			// 2. ingresar los datos
+			// 3.llamar el metodo ejecutar opcion.
+		}
 	}
 
 	public static void main(String[] args) {
@@ -72,18 +78,19 @@ public class Main extends Application {
 
 	public static int ejecutarOpcion(int opc, int num1, int num2, int num3) {
 		int numSalida = 0;
-		
+
 		switch (opc) {
 
 		case 1:
-			numSalida=obtenerNumeroMenorDeTresNumeros(num1, num2, num3);
+			numSalida = obtenerNumeroMenorDeTresNumeros(num1, num2, num3);
 			break;
-			
+
+		case 2:
+			numSalida = obtenerNumeroMayorDeTresNumeros(num1, num2, num3);
+			break;
 		}
 		return numSalida;
 	}
-	
-	
 
 	/**
 	 * El Metodo obtiene 3 numeros por parametro y verifica cual es el menor de
@@ -104,5 +111,17 @@ public class Main extends Application {
 			numMenor = num3;
 		}
 		return numMenor;
+	}
+
+	public static int obtenerNumeroMayorDeTresNumeros(int num1, int num2, int num3) {
+		int numMayor = 0;
+		if (num1 > num2 && num1 > num3) {
+			numMayor = num1;
+		} else if (num2 > num3 && num2 > num1) {
+			numMayor = num2;
+		} else {
+			numMayor = num3;
+		}
+		return numMayor;
 	}
 }
